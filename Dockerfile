@@ -16,6 +16,8 @@ RUN set -ex \
  && curl -sSfLo /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 \
  && chmod +x /usr/local/bin/dumb-init
 
+ADD JDBCCryptAuth.jar /opt/openfire/lib/JDBCCryptAuth.jar
+
 ADD start.sh /usr/local/bin/start.sh
 
 EXPOSE 9090 9091 5222 5223 5269
